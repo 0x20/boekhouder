@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "boekhouder"
+version = "0.1.0"
+description = "Tool to automatically annotate Hackerspace.Gent bank extracts and prepare jaaroversicht"
+authors = ["TQ Hirsch <thequux@thequux.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+boekhouder = "boekhouder.cmd:cli"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openpyxl = "^3.1.2"
+PyYAML = "^6.0.1"
+beancount = "^2.3.6"
+click = "^8.1.7"
+google-re2 = "^1.1.20240501"
+#pyre2 = "^0.3.6"
+pandas = "^2.2.2"
+polars = "^0.20.25"
+fastexcel = "^0.10.4"
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
